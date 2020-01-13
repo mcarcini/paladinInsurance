@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Paladin.Infrastructure;
 using Paladin.Models;
 using Paladin.ViewModels;
 using System;
@@ -20,7 +21,7 @@ namespace Paladin.Controllers
             _context = new PaladinDbContext();
         }
 
-        public void GetApplicantsForReminders()
+        public ActionResult GetApplicantsForReminders()
         {
             var applicants = _context.Applicants.ToList();
             var vmApplicants = new List<ApplicantVM>();
@@ -28,10 +29,7 @@ namespace Paladin.Controllers
             {
                 vmApplicants.Add(Mapper.Map<ApplicantVM>(app));
             }
-
-            XmlSerializer serializer = new XmlSerializer(vmApplicants.GetType());
-            Response.ContentType = "text/xml";
-            serializer.Serialize(Response.Output, vmApplicants);
+            return new XMLResult(vmApplicants);
         }
 
     }

@@ -150,6 +150,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\XMLResult.cs" />
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\Employment.cs" />
     <Compile Include="Models\PaladinDbContext.cs" />
@@ -259,7 +260,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Models\" />
-    <Folder Include="Infrastructure\" />
     <Folder Include="Views\Features\" />
     <Folder Include="Views\Service\" />
   </ItemGroup>
