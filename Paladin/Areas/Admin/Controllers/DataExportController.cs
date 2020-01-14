@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Paladin.Infrastructure;
 using Paladin.Models;
 using Paladin.ViewModels;
 using System;
@@ -34,29 +35,9 @@ namespace Paladin.Areas.Admin.Controllers
                 mappedApplicants.Add(Mapper.Map<ApplicantVM>(app));
             }
 
-            var stream = new MemoryStream();
-            var streamWriter = new StreamWriter(stream, Encoding.Default);
-
-            foreach (var item in mappedApplicants)
-            {
-                var properties = typeof(ApplicantVM).GetProperties();
-                foreach (var prop in properties)
-                {
-                    streamWriter.Write(GetValue(item, prop.Name));
-                    streamWriter.Write(", ");
-                }
-                streamWriter.WriteLine();
-            }
-
-            streamWriter.Flush();
-            stream.Position = 0;
-
-            return File(stream, "text/csv");
+            return new CSVResult(mappedApplicants,"TestCSV");            
         }
 
-        public static string GetValue(object item, string propName)
-        {
-            return item.GetType().GetProperty(propName).GetValue(item, null).ToString() ?? "";
-        }
+        
     }
 }
