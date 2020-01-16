@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Paladin.Infrastructure;
 using Paladin.Models;
 using Paladin.ViewModels;
 using System;
@@ -10,6 +11,9 @@ using System.Web.Mvc;
 
 namespace Paladin.Controllers
 {
+    [WorkflowFilter(
+        MinRequiredStage = (int)WorkflowValues.VehicleInfo,
+        CurrentStage = (int)WorkflowValues.Products)]
     public class ProductsController : Controller
     {
         private PaladinDbContext _context;

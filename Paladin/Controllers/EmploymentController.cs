@@ -7,9 +7,13 @@ using Paladin.Models;
 using System.Data.Entity;
 using Paladin.ViewModels;
 using AutoMapper;
+using Paladin.Infrastructure;
 
 namespace Paladin.Controllers
 {
+    [WorkflowFilter(
+        MinRequiredStage = (int)WorkflowValues.AddressInfo,
+        CurrentStage = (int)WorkflowValues.EmploymentInfo)]
     public class EmploymentController : Controller
     {
         private PaladinDbContext _context;
