@@ -59,9 +59,9 @@ namespace Paladin.Controllers
             }
             else
             {
-                return PartialView(new Progress { CurrentStage = 10, HighestStage = 10 });
+                return PartialView(new Progress { CurrentStage = 10, HighestStage = 0 });
             }
-            return PartialView();
+            //return PartialView();
         }
     }
 }

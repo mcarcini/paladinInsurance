@@ -151,6 +151,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\CSVResult.cs" />
+    <Compile Include="Infrastructure\RazorWorkflowExtensions.cs" />
     <Compile Include="Infrastructure\WorkflowFilter.cs" />
     <Compile Include="Infrastructure\WorkflowValues.cs" />
     <Compile Include="Infrastructure\XMLResult.cs" />

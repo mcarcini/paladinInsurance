@@ -6,7 +6,7 @@ using System.Web;
 namespace Paladin.Infrastructure
 {
     public enum WorkflowValues
-    {
+    {        
         Begin = 0,
         ApplicantInfo = 10,
         AddressInfo = 20,
