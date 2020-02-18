@@ -1,8 +1,10 @@
 ﻿using AutoMapper;
+using Paladin.Infrastructure;
 using Paladin.Models;
 using Paladin.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -15,6 +17,11 @@ namespace Paladin
     {
         protected void Application_Start()
         {
+            if (!string.IsNullOrEmpty(ConfigurationManager.AppSettings["ActiveTheme"])) {
+                var activeTheme = ConfigurationManager.AppSettings["ActiveTheme"];
+                ViewEngines.Engines.Insert(0,new ThemeViewEngine(activeTheme));
+            }
+
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
