@@ -1,4 +1,5 @@
-﻿using System.Web;
+﻿using Paladin.Infrastructure;
+using System.Web;
 using System.Web.Mvc;
 
 namespace Paladin
@@ -7,7 +8,8 @@ namespace Paladin
     {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
-            filters.Add(new HandleErrorAttribute());
+            //filters.Add(new HandleErrorAttribute());
+            filters.Add(new ExceptionLogginFilter());
         }
     }
 }

@@ -19,6 +19,7 @@ namespace Paladin.Models
         public DbSet<Vehicle> Vehicles { get; set; }
         public DbSet<Products> Products { get; set; }
         public DbSet<Address> Addresses { get; set; }
+        public DbSet<ErrorLog> Errors { get; set; }
     }
 
     public class PaladinInitializer : DropCreateDatabaseIfModelChanges<PaladinDbContext>

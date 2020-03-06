@@ -5,6 +5,7 @@ using Paladin.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -38,6 +39,6 @@ namespace Paladin
             Mapper.CreateMap<Address, AddressVM>();
             Mapper.CreateMap<Employment, EmploymentVM>();
             Mapper.CreateMap<Products, ProductsVM>();
-        }
+        }        
     }
 }
