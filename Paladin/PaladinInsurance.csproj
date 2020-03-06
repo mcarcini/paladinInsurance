@@ -150,6 +150,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\BirthdateValidator.cs" />
     <Compile Include="Infrastructure\CSVResult.cs" />
     <Compile Include="Infrastructure\ExceptionLogginFilter.cs" />
     <Compile Include="Infrastructure\RazorWorkflowExtensions.cs" />

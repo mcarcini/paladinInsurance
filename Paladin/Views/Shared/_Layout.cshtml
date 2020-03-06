@@ -99,7 +99,10 @@
     <script src="~/Scripts/jquery.validate.min.js"></script>
     <script>
     $(function () {
-        $(".datepicker").datepicker();
+        $(".datepicker").datepicker({
+            yearRange: '1900:2015',
+            changeYear : true
+        });
 
         $(".datepicker-alt").datepicker();
 
