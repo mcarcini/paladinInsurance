@@ -171,6 +171,7 @@
     <Compile Include="ViewModels\AddressVM.cs" />
     <Compile Include="ViewModels\ApplicantVM.cs" />
     <Compile Include="ViewModels\Employments.cs" />
+    <Compile Include="ViewModels\EmploymentSummary.cs" />
     <Compile Include="ViewModels\EmploymentVM.cs" />
     <Compile Include="ViewModels\ProductsVM.cs" />
     <Compile Include="ViewModels\VehicleVM.cs" />

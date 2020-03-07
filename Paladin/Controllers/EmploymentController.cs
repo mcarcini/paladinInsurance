@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using Paladin.Models;
 using System.Data.Entity;
@@ -31,7 +29,7 @@ namespace Paladin.Controllers
             }
             var tracker = (Guid)Session["Tracker"];
 
-            var employment = new Employments();
+            var employment = new EmploymentSummary();
             var existingPrimary = _context.Applicants.FirstOrDefault(x => x.ApplicantTracker == tracker).Employment.FirstOrDefault(x => x.IsPrimary);
             if (existingPrimary != null)
             {
@@ -48,7 +46,7 @@ namespace Paladin.Controllers
         }
 
         [HttpPost]
-        public ActionResult EmploymentInfo(Employments vm)
+        public ActionResult EmploymentInfo(EmploymentSummary vm)
         {
             if (Session["Tracker"] == null)
             {
