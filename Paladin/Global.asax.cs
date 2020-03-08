@@ -23,6 +23,8 @@ namespace Paladin
                 ViewEngines.Engines.Insert(0,new ThemeViewEngine(activeTheme));
             }
 
+            ModelBinderProviders.BinderProviders.Insert(0, new XMLModelBinderProvider());
+
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);

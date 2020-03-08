@@ -142,6 +142,7 @@
     <Compile Include="Areas\Admin\Controllers\DefaultController.cs" />
     <Compile Include="Controllers\AddressController.cs" />
     <Compile Include="Controllers\ApplicantController.cs" />
+    <Compile Include="Controllers\EMarketingController.cs" />
     <Compile Include="Controllers\EmploymentController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -153,14 +154,18 @@
     <Compile Include="Infrastructure\BirthdateValidator.cs" />
     <Compile Include="Infrastructure\CSVResult.cs" />
     <Compile Include="Infrastructure\ExceptionLogginFilter.cs" />
+    <Compile Include="Infrastructure\XMLModelBinderProvider.cs" />
     <Compile Include="Infrastructure\RazorWorkflowExtensions.cs" />
     <Compile Include="Infrastructure\ThemeViewEngine.cs" />
     <Compile Include="Infrastructure\WorkflowFilter.cs" />
     <Compile Include="Infrastructure\WorkflowValues.cs" />
+    <Compile Include="Infrastructure\XMLModelBinder.cs" />
     <Compile Include="Infrastructure\XMLResult.cs" />
     <Compile Include="Models\Address.cs" />
+    <Compile Include="Models\EMonthlyReport.cs" />
     <Compile Include="Models\Employment.cs" />
     <Compile Include="Models\ErrorLog.cs" />
+    <Compile Include="Models\EWeeklyReport.cs" />
     <Compile Include="Models\PaladinDbContext.cs" />
     <Compile Include="Models\Products.cs" />
     <Compile Include="Models\Progress.cs" />
@@ -273,6 +278,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Views\EMarketing\" />
     <Folder Include="Views\Features\" />
     <Folder Include="Views\Service\" />
   </ItemGroup>
