@@ -8,8 +8,9 @@ using System.Web;
 
 namespace Paladin.ViewModels
 {
-    public class ApplicantVM
+    public class ApplicantVM : LogData
     {
+        public string UserAgent { get; set; }
         [Required]
         [Display(Name = "First Name")]
         public string FirstName { get; set; }

@@ -154,6 +154,7 @@
     <Compile Include="Infrastructure\BirthdateValidator.cs" />
     <Compile Include="Infrastructure\CSVResult.cs" />
     <Compile Include="Infrastructure\ExceptionLogginFilter.cs" />
+    <Compile Include="Infrastructure\HttpValueProvider.cs" />
     <Compile Include="Infrastructure\XMLModelBinderProvider.cs" />
     <Compile Include="Infrastructure\RazorWorkflowExtensions.cs" />
     <Compile Include="Infrastructure\ThemeViewEngine.cs" />
@@ -166,6 +167,7 @@
     <Compile Include="Models\Employment.cs" />
     <Compile Include="Models\ErrorLog.cs" />
     <Compile Include="Models\EWeeklyReport.cs" />
+    <Compile Include="Models\LogData.cs" />
     <Compile Include="Models\PaladinDbContext.cs" />
     <Compile Include="Models\Products.cs" />
     <Compile Include="Models\Progress.cs" />
