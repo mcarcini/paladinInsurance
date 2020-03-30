@@ -1,4 +1,5 @@
-﻿using Paladin.Models;
+﻿using Paladin.Infrastructure;
+using Paladin.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +9,7 @@ using System.Xml.Serialization;
 
 namespace Paladin.Controllers
 {
+    [HttpAuthenticate("Marco","123")]
     public class EMarketingController : Controller
     {
 
@@ -17,6 +19,7 @@ namespace Paladin.Controllers
             this.context = context;
         }
 
+        [HttpPost]
         public ActionResult WeeklyReport(EWeeklyReport weeklyReport)
         {
             if (ModelState.IsValid) {
